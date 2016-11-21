@@ -17,11 +17,11 @@ from pymongo import MongoClient
 
 #opens the file downloaded from google forms
 #replace with your directory
-csvfile = open('/Users/amerikanoc/Desktop/Project X.csv', 'r')
+csvfile = open('Project X.csv', 'r')
 reader = csv.reader(csvfile)
 #opens the file in which the data will be written in json format
 #the file is opened in appending mode
-textfile = open('/Users/amerikanoc/Documents/Programming/Python/Smart_School/Testing/students.txt', 'a')
+textfile = open('students.txt', 'a')
 
 #Connect to MongoDB
 client = MongoClient()
