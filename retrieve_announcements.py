@@ -1,4 +1,4 @@
-#-------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------
 # Name:
 # Purpose:       This .py file prints the announcements depending on the student 
 #
@@ -6,8 +6,10 @@
 # Author:        Konstantinos Oikonomou
 #
 # Created:       13/11/2016
+#
+#IMPORTANT NOTICE: In order for the script to run a mongo server must be running localy
 # 
-#-------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------
 from pymongo import MongoClient
 import time
 
