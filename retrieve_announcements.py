@@ -15,7 +15,7 @@ import time
 
 #today's date
 #BE CAREFUL with the format
-now = time.strftime("%d-%m-%Y")
+now = time.strftime("%d/%m/%Y")
 
 #connects to the Db
 client = MongoClient()
