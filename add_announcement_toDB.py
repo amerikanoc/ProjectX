@@ -12,10 +12,14 @@
 #
 #---------------------------------------------------------------------------------------------
 import csv
+import urllib.request
+import os
 from pymongo import MongoClient
 
 #opens the file downloaded from google forms
 #replace with your directory
+url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQj38RN_Ig0E_6q3BuW_woaP2ob4E1jZvDqdJECZlNIt7ToJHtbMW9XpKYlVrzdaEDQ2RMTqJTwZVm5/pub?output=csv'
+urllib.request.urlretrieve(url, 'Add Announcement.csv')
 csvfile = open('Add Announcement.csv', 'r')
 reader = csv.reader(csvfile)
 #opens the file in which the data will be written in json format
@@ -47,3 +51,5 @@ for row in list(reader)[1:]:
     
     #increments the _id of the announcement
     idcount += 1
+
+os.remove('Add Announcement.csv')
