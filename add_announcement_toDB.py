@@ -16,9 +16,9 @@ import urllib.request
 import os
 from pymongo import MongoClient
 
-#opens the file downloaded from google forms
-#replace with your directory
+#downloads file from google
 url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQj38RN_Ig0E_6q3BuW_woaP2ob4E1jZvDqdJECZlNIt7ToJHtbMW9XpKYlVrzdaEDQ2RMTqJTwZVm5/pub?output=csv'
+#saves the file in Add Announcement.csv
 urllib.request.urlretrieve(url, 'Add Announcement.csv')
 csvfile = open('Add Announcement.csv', 'r')
 reader = csv.reader(csvfile)
@@ -52,4 +52,5 @@ for row in list(reader)[1:]:
     #increments the _id of the announcement
     idcount += 1
 
+#deletes the csv file so that another one will be downloaded with renewed info
 os.remove('Add Announcement.csv')

@@ -16,7 +16,6 @@ import csv
 from pymongo import MongoClient
 
 #opens the file downloaded from google forms
-#replace with your directory
 csvfile = open('Project X.csv', 'r')
 reader = csv.reader(csvfile)
 #opens the file in which the data will be written in json format
